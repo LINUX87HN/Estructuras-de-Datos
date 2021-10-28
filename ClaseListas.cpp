@@ -16,6 +16,8 @@ private:
 };
 typedef nodo *pnodo;
 class lista{
+    private:
+    pnodo primero;
 public:
     lista()
     {
@@ -26,15 +28,14 @@ void ins_primero(int v);
 void ins_final(int v);
 void borrar_primero();
 void borrar_final();
-void imprime();
+
 void borrar_vref(int vref);
-void ins_lista_n(int , int)
-private:
-    pnodo primero;
+void ins_lista_n(int , int);
+
 };
 int main()
 {
- 
+ //prueba de actualizacion del codigo
 
     
 
