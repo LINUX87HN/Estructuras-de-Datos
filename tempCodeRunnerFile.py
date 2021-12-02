@@ -99,58 +99,12 @@ Gdir.add_edge("b","e")
 Gdir.add_edge("a","e")
 Gdir.add_edge("e","a")
 Gdir.add_edge("d","a")
-nx.draw(Gdir,with_labels=True)
+nx.draw(Gdir)
 plt.show()
 print(nx.dijkstra_path(Gdir,"a","e"))
 print(nx.dijkstra_path(Gdir,"a","d"))
 
 print(nx.dijkstra_path_length(Gdir,"a","e"))
 print(nx.dijkstra_path_length(Gdir,"c","e"))
-print(nx.dijkstra_path_length(Gdir,"e","d"))
-#print(nx.dijkstra_predecessor_and_distance(Gdir,"a"))
+print(nx.dijkstra_predecessor_and_distance(Gdir,"a"))
 print( matrixadj(Gdir))
-
-#print(Gdir.has_edge("a","b"))
-#print(Gdir.has_edge("b","a"))
-#print(Gdir.has_edge("c","b"))
-#print(Gdir.has_edge("b","c"))
-#print(Gdir.has_edge("e","c"))
-
-#Grafo aleatorio
-import random
-Grandom=nx.Graph()
-n=4
-p=.9
-for i in range(n+1):
-    Grandom.add_node(i)
-
-for i in range(n+1):
-    for j in range(i):
-        if(random.random()<p):
-            Grandom.add_edge(i,j)
-nx.draw(G,with_labels =True)
-
-print("matriz adj",matrixadj(Grandom))
-plt.show()
-
-#print( G2.edges)
-G3=nx.complete_graph(3)
-print( matrixadj(G3))
-
-
-
-
-
-
-
-#plt.show()
-# distrubucion  de grado de un grafo.
-grados=[]
-for nodo in Grandom.nodes:
-    grados.append(Grandom.degree(nodo))
-#print(grados)
-plt.hist(grados)#grafica un histograma a partir de una lista de datos.
-#plt.show()
-
-
-
